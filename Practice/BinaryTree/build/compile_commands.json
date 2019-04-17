@@ -1,7 +1,5 @@
-[
-{
+[{
   "directory": "/Users/eddyekofo/Coding/Languages/C++/Practice/BinaryTree/build",
   "command": "/usr/bin/clang++    -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/BinaryTree.dir/src/main.cpp.o -c /Users/eddyekofo/Coding/Languages/C++/Practice/BinaryTree/src/main.cpp",
-  "file": "/Users/eddyekofo/Coding/Languages/C++/Practice/BinaryTree/src/main.cpp"
-}
-]
+  "file": "/mnt/c/Users/eddyekofo/Coding/Languages/C++/Practice/BinaryTree/src/main.cpp"
+}]
