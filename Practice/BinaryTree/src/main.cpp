@@ -2,8 +2,9 @@
 
 int main(int, char **)
 {
-    std::cout << "Hello, world!\n";
+    std::cout << "Hello, world!\n:";
     int numIn;
     std::cin >> numIn;
-    std::cout << "The inputed number: " << numIn;
+    std::cout << "The inputted number: " << numIn << '\n';
+    return 0;
 }
