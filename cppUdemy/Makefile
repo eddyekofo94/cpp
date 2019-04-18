@@ -15,6 +15,8 @@ all: $(BIN)/$(EXECUTABLE)
 clean:
 	$(RM) $(BIN)/$(EXECUTABLE)
 
+rebuild: clean all
+
 run: all
 	./$(BIN)/$(EXECUTABLE)
 
