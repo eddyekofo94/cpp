@@ -1,10 +1,11 @@
 /* tasks.json */
 {
-    "version": "2.0.0",
-    "tasks": [{
-        "label": "Build with Clang",
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "Build: Clang",
         "type": "shell",
-        "command": "clang++",
+        "command": "clang",
         "args": [
             "-std=c++17",
             "-stdlib=libc++",
@@ -17,13 +18,14 @@
             "kind": "build",
             "isDefault": true
         }
-    }, {
+    },
+    {
         "label": "build with clang++",
         "command": "clang++",
         "args": [
             "-o",
-            "./src/main", // executable
-            "./src/main.cpp", // main file
+            "./src/main",
+            "./src/main.cpp",
             "-g",
             "-v"
         ],
@@ -37,7 +39,7 @@
             "owner": "cpp",
             "fileLocation": [
                 "relative",
-                "${workspaceRoot}"
+                "${workspaceFolder}"
             ],
             "pattern": {
                 "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
@@ -48,5 +50,72 @@
                 "message": 5
             }
         }
-    }]
+    },
+    {
+        "label": "wsl-cpptools: build",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+            "-g",
+            "-o",
+            "/mnt/c/Users/eekofo/Documents/cpp/cppUdemy/bin/main",
+            "./src/main.cpp"
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": [
+            "$gcc"
+        ]
+    },
+    {
+        "label": "Makefile: build",
+        "type": "shell",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "command": "bash",
+        "args": [
+            "-c",
+            "make run"
+        ],
+        "problemMatcher": [
+            "$gcc"
+        ]
+    },
+    {
+        "label": "Makefile-build & run",
+        "type": "shell",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        },
+        "windows": {
+            "command": "bash"
+        },
+        "linux": {
+            "command": "bash"
+        },
+        "args": [
+            "-c",
+            "make run"
+        ]
+    },
+    {
+        "label": "Makefile: clean",
+        "type": "shell",
+        "windows": {
+            "command": "bash"
+        },
+        "linux": {
+            "command": "bash"
+        },
+        "args": [
+            "-c",
+            "make clean"
+        ]
+    }
+]
 }
