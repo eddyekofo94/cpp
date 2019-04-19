@@ -4,4 +4,3 @@ int main()
 {
 	std::cout << "Hello Easy C++ project!" << '\n';
 }
-
