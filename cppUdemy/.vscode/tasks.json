@@ -2,51 +2,95 @@
 {
     "version": "2.0.0",
     "tasks": [{
-        "label": "Build with Clang",
-        "type": "shell",
-        "command": "clang++",
-        "args": [
-            "-std=c++17",
-            "-stdlib=libc++",
-            "./src/main.cpp",
-            "-o",
-            "./bin/main.out",
-            "--debug"
-        ],
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        }
-    }, {
-        "label": "build with clang++",
-        "command": "clang++",
-        "args": [
-            "-o",
-            "./src/main", // executable
-            "./src/main.cpp", // main file
-            "-g",
-            "-v"
-        ],
-        "type": "shell",
-        "presentation": {
-            "echo": true,
-            "reveal": "always",
-            "panel": "shared"
-        },
-        "problemMatcher": {
-            "owner": "cpp",
-            "fileLocation": [
-                "relative",
-                "${workspaceRoot}"
+            "label": "Clang: Build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "-stdlib=libc++",
+                "./src/main.cpp",
+                "-o",
+                "./bin/main.out",
+                "--debug"
+            ]
+        }, {
+            "label": "Clang++: Build",
+            "command": "clang++",
+            "args": [
+                "-o",
+                "./src/main", // executable
+                "./src/main.cpp", // main file
+                "-g",
+                "-v"
             ],
-            "pattern": {
-                "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                "file": 1,
-                "line": 2,
-                "column": 3,
-                "severity": 4,
-                "message": 5
+            "type": "shell",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
             }
+        }, {
+            "label": "build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "bash",
+            "args": [
+                "-c",
+                "make run"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Makefile: build & run",
+            "type": "shell",
+            "windows": {
+                "command": "bash"
+            },
+            "linux": {
+                "command": "bash"
+            },
+            "args": [
+                "-c",
+                "make run"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Makefile: clean",
+            "type": "shell",
+            "windows": {
+                "command": "bash"
+            },
+            "linux": {
+                "command": "bash"
+            },
+            "args": [
+                "-c",
+                "make clean"
+            ]
         }
-    }]
+    ]
 }
