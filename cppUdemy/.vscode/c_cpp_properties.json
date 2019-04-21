@@ -1,5 +1,6 @@
 {
-    "configurations": [{
+    "configurations": [
+        {
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**"
@@ -11,7 +12,8 @@
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "vector-of-bool.cmake-tools"
         },
         {
             "name": "Win32",

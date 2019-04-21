@@ -5,7 +5,7 @@ BIN		:= bin
 SRC		:= src
 INCLUDE	:= include
 LIB		:= lib
-	
+
 LIBRARIES	:=
 
 EXECUTABLE	:= main

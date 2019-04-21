@@ -1,8 +1,7 @@
 /* tasks.json */
 {
   "version": "2.0.0",
-  "tasks": [
-    {
+  "tasks": [{
       "label": "Clang: Build",
       "type": "shell",
       "command": "clang++",
@@ -45,7 +44,7 @@
       }
     },
     {
-      "label": "build",
+      "label": "Makefile: build",
       "type": "shell",
       "group": {
         "kind": "build",
@@ -78,6 +77,10 @@
       },
       "linux": {
         "command": "bash"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
       },
       "args": ["-c", "make clean"]
     },
