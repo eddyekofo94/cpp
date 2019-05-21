@@ -8,6 +8,8 @@ public:
     Vector();
     ~Vector();
 
+    Vector(double &, double &, double &);
+
     void setX(double);
 
     void setY(double);

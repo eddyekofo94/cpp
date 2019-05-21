@@ -8,6 +8,10 @@ class Vector
     {
     }
 
+    Vector::Vector(double inputX, double inputY, double inputX){
+        
+    }
+
     Vector::~Vector()
     {
     }
